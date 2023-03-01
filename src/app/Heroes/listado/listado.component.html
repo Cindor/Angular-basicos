@@ -1,0 +1,23 @@
+<p>listado ATR</p>
+
+<ng-container *ngIf="agregado !== '' ; else elseTemplate">
+    <h3>Heroes borrados: <small>{{ agregado }}</small> </h3>
+</ng-container>
+<ng-template #elseTemplate>
+    <h3> No se ha borrado nada </h3>
+</ng-template>
+
+
+
+<button (click)="borrar()">
+    Borrar Heroe
+</button>
+
+<ul>
+    <li *ngFor="let heroe of heroes let i = index">
+                    {{ heroe }}
+    </li>
+</ul>
+
+
+
